@@ -24,7 +24,7 @@ public class LerPDF {
 	public static void main(String[] args) {
 
 		try {
-			PdfReader pdf = new PdfReader(new FileInputStream("CARAJAS.pdf"));
+			PdfReader pdf = new PdfReader(new FileInputStream("extrato.pdf"));
 			Pattern padrao = Pattern.compile(REGEX_LINHA_COM_DATA);
 			for (int i = 1; i <= pdf.getNumberOfPages(); i++) {
 				String[] linhas = PdfTextExtractor.getTextFromPage(pdf, i).split("\n");
